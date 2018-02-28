@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-image: url(assets/img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto Condensed', sans-serif; }
+  body a:hover,
+  body button:hover,
+  body input[type="submit"]:hover {
+    cursor: pointer; }
+  body app-root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    body app-root .area {
+      background-color: #fff;
+      height: 100%;
+      max-width: 80vw;
+      width: 100%;
+      padding: 20px;
+      flex-direction: column; }
+      body app-root .area .list {
+        min-height: 100px;
+        width: 100%; }
+        body app-root .area .list .todoWrapper {
+          background-color: #a8a8a8;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start; }
+          body app-root .area .list .todoWrapper p {
+            margin-left: 10px; }
+      body app-root .area input {
+        max-width: 500px;
+        width: 80vw;
+        border: 5px solid #e3e3e3;
+        padding: 15px 10px 15px 10px;
+        color: #a8a8a8; }
+      body app-root .area button {
+        width: 10vw;
+        border: 5px solid #e3e3e3;
+        padding: 15px 35px;
+        color: #a8a8a8; }
+      body app-root .area input:focus,
+      body app-root .area button:focus {
+        outline: none; }
+
+/*# sourceMappingURL=styles.css.map */

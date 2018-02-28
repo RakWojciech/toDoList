@@ -20,4 +20,8 @@ export class TodoItemComponent implements OnInit {
 	private removeTodo(): void {
 		this.todoService.removeTodo(this.todo.id);
 	}
+
+	private doneTodo(): void {
+		this.todoService.doneTodo(this.todo.id);
+	}
 }
