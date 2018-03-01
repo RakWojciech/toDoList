@@ -1,7 +1,7 @@
-<div class="todoWrapper">
+<div class="todoWrapper" [ngClass]="{'done': done === true }">
     <div class="button-area">
-        <button class="removeTodo" (click)="removeTodo()">remove</button>
-        <button class="removeTodo" (click)="doneTodo()">done</button>
+        <button class="removeTodo" (click)="removeTodo()">X</button>
+        <button class="addTodo" (click)="doneTodo()">done</button>
     </div>
     <div class="text-area">
         <p>{{todo.text}}</p>

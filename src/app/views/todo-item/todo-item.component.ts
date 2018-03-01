@@ -11,6 +11,7 @@ export class TodoItemComponent implements OnInit {
 
 	@Input()
 	private todo: Todo;
+	done: boolean = false;
 
 	constructor(private todoService: TodoService) { }
 
@@ -21,7 +22,11 @@ export class TodoItemComponent implements OnInit {
 		this.todoService.removeTodo(this.todo.id);
 	}
 
-	private doneTodo(): void {
-		this.todoService.doneTodo(this.todo.id);
+	doneTodo() {
+		this.done = true;
+		setTimeout(() => {
+			this.todoService.removeTodo(this.todo.id);
+		}, 1000);
+		// this.todoService.doneTodo(this.todo.id);
 	}
 }

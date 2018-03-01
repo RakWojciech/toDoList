@@ -5,7 +5,7 @@ export class TodoService {
 
 	private todos: Todo[];
 	private nextId: number;
-	private done: boolean;
+	// private done: boolean;
 	constructor() { 
 		this.todos = [];
 		this.nextId = 0;
@@ -28,9 +28,10 @@ export class TodoService {
 	}
 
 	public removeTodo(id: number): void {
+		console.log(this.todos);
 		this.todos = this.todos.filter((todo)=> todo.id !== id);
+		localStorage.removeItem(id.toString());
 	}
 	public doneTodo(id: number): void {
-		this.done = true;
 	}
 }

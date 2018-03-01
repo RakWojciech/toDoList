@@ -3,10 +3,27 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
-  background-image: url(assets/img/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Roboto Condensed', sans-serif; }
+  body p,
+  body a,
+  body button {
+    font-size: .8vw; }
+  body input {
+    font-size: .8vw; }
+    body input::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      font-size: .8vw; }
+    body input::-moz-placeholder {
+      /* Firefox 19+ */
+      font-size: .8vw; }
+    body input:-ms-input-placeholder {
+      /* IE 10+ */
+      font-size: .8vw; }
+    body input:-moz-placeholder {
+      /* Firefox 18- */
+      font-size: .8vw; }
   body a:hover,
   body button:hover,
   body input[type="submit"]:hover {
@@ -25,27 +42,63 @@ body {
       width: 100%;
       padding: 20px;
       flex-direction: column; }
+      body app-root .area .todo-input-wrapper {
+        margin-top: 50px; }
+        body app-root .area .todo-input-wrapper button {
+          transition: .3s ease; }
+          body app-root .area .todo-input-wrapper button:hover, body app-root .area .todo-input-wrapper button:focus {
+            background-color: #2c2c2c !important;
+            color: #fff; }
       body app-root .area .list {
-        min-height: 100px;
+        min-height: 50px;
         width: 100%; }
         body app-root .area .list .todoWrapper {
-          background-color: #a8a8a8;
           display: flex;
           align-items: center;
-          justify-content: flex-start; }
+          justify-content: flex-start;
+          border: 5px solid white; }
+          body app-root .area .list .todoWrapper.done .text-area p {
+            text-decoration: line-through; }
+          body app-root .area .list .todoWrapper .button-area {
+            max-width: 5vw;
+            width: 100%; }
+            body app-root .area .list .todoWrapper .button-area button {
+              padding: 15px 0 !important;
+              border: none !important; }
+              body app-root .area .list .todoWrapper .button-area button.removeTodo {
+                font-size: 120%;
+                padding-right: 10px !important;
+                border-right: 1px solid #2c2c2c !important;
+                transition: .3s ease; }
+                body app-root .area .list .todoWrapper .button-area button.removeTodo:hover, body app-root .area .list .todoWrapper .button-area button.removeTodo:focus {
+                  color: red; }
+              body app-root .area .list .todoWrapper .button-area button.addTodo {
+                font-size: 120%;
+                width: 3vw;
+                height: 3vw;
+                padding: 0; }
+                body app-root .area .list .todoWrapper .button-area button.addTodo:hover, body app-root .area .list .todoWrapper .button-area button.addTodo:focus {
+                  color: green; }
+          body app-root .area .list .todoWrapper .text-area {
+            max-width: 95vw;
+            width: 100%;
+            background-color: rgba(227, 227, 227, 0.5); }
+            body app-root .area .list .todoWrapper .text-area p {
+              padding: 15px 10px !important;
+              font-size: 120%; }
           body app-root .area .list .todoWrapper p {
-            margin-left: 10px; }
+            margin-left: 10px !important;
+            margin: 0 !important; }
       body app-root .area input {
         max-width: 500px;
         width: 80vw;
-        border: 5px solid #e3e3e3;
+        border: 5px solid #2c2c2c;
         padding: 15px 10px 15px 10px;
-        color: #a8a8a8; }
+        color: #2c2c2c; }
       body app-root .area button {
-        width: 10vw;
-        border: 5px solid #e3e3e3;
+        border: 5px solid #2c2c2c;
         padding: 15px 35px;
-        color: #a8a8a8; }
+        color: #2c2c2c; }
       body app-root .area input:focus,
       body app-root .area button:focus {
         outline: none; }

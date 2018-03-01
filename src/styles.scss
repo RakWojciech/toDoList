@@ -1,13 +1,38 @@
-$main: #a8a8a8;
+$main: #2c2c2c;
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 body {
     height: 100vh;
     padding: 0;
     margin: 0;
-    background-image: url(assets/img/bg.jpg);
+    // background-image: url(assets/img/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Roboto Condensed', sans-serif;
+    p,
+    a,
+    button,
+    {
+        font-size: .8vw;
+    }
+    input {
+        font-size: .8vw;
+        &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            font-size: .8vw;
+        }
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            font-size: .8vw;
+        }
+        &:-ms-input-placeholder {
+            /* IE 10+ */
+            font-size: .8vw;
+        }
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            font-size: .8vw;
+        }
+    }
     a,
     button,
     input[type="submit"] {
@@ -32,37 +57,90 @@ body {
             // align-items: center;
             // justify-content: center;
             flex-direction: column;
+            .todo-input-wrapper {
+                margin-top: 50px;
+                button {
+                    transition: .3s ease;
+                    &:hover,
+                    &:focus {
+                        background-color: $main !important;
+                        color: #fff;
+                    }
+                }
+            }
             .list {
-                min-height: 100px;
+                min-height: 50px;
                 width: 100%;
                 .todoWrapper {
-                    background-color: $main;
+                    // background-color: $main;
                     display: flex;
                     align-items: center;
                     justify-content: flex-start;
+                    border: 5px solid white;
+                    &.done {
+                        // border: 5px solid green;
+                        .text-area {
+                            p {
+                                text-decoration: line-through;
+                            }
+                        }
+                    }
                     .button-area {
-                        // max-width: 20vw;
-                        // width: 100%;
+                        max-width: 5vw;
+                        width: 100%;
+                        button {
+                            padding: 15px 0 !important;
+                            border: none !important;
+                            &.removeTodo {
+                                // width: 5vw;
+                                // border: none !important;
+                                font-size: 120%;
+                                padding-right: 10px !important;
+                                border-right: 1px solid $main !important;
+                                transition: .3s ease;
+                                &:hover,
+                                &:focus {
+                                    color: red;
+                                }
+                            }
+                            &.addTodo {
+                                font-size: 120%;
+                                // border-radius: 100%;
+                                width: 3vw;
+                                height: 3vw;
+                                padding: 0;
+                                // border-width: 1px;
+                                &:hover,
+                                &:focus {
+                                    color: green;
+                                }
+                            }
+                        }
                     }
                     .text-area {
-                        // max-width: 80vw;
-                        // width: 100%;
+                        max-width: 95vw;
+                        width: 100%;
+                        background-color: rgba(#e3e3e3, .5);
+                        p {
+                            padding: 15px 10px !important;
+                            font-size: 120%;
+                        }
                     }
                     p {
-                        margin-left: 10px;
+                        margin-left: 10px !important;
+                        margin: 0 !important;
                     }
                 }
             }
             input {
                 max-width: 500px;
                 width: 80vw;
-                border: 5px solid #e3e3e3;
+                border: 5px solid $main;
                 padding: 15px 10px 15px 10px;
                 color: $main;
             }
             button {
-                width: 10vw;
-                border: 5px solid #e3e3e3;
+                border: 5px solid $main;
                 padding: 15px 35px;
                 color: $main;
             }
