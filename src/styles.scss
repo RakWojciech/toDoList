@@ -4,7 +4,6 @@ body {
     height: 100vh;
     padding: 0;
     margin: 0;
-    // background-image: url(assets/img/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Roboto Condensed', sans-serif;
@@ -53,9 +52,6 @@ body {
             max-width: 80vw;
             width: 100%;
             padding: 20px;
-            // display: flex;
-            // align-items: center;
-            // justify-content: center;
             flex-direction: column;
             .todo-input-wrapper {
                 margin-top: 50px;
@@ -72,13 +68,11 @@ body {
                 min-height: 50px;
                 width: 100%;
                 .todoWrapper {
-                    // background-color: $main;
                     display: flex;
                     align-items: center;
                     justify-content: flex-start;
                     border: 5px solid white;
                     &.done {
-                        // border: 5px solid green;
                         .text-area {
                             p {
                                 text-decoration: line-through;
@@ -92,8 +86,6 @@ body {
                             padding: 15px 0 !important;
                             border: none !important;
                             &.removeTodo {
-                                // width: 5vw;
-                                // border: none !important;
                                 font-size: 120%;
                                 padding-right: 10px !important;
                                 border-right: 1px solid $main !important;
@@ -105,11 +97,9 @@ body {
                             }
                             &.addTodo {
                                 font-size: 120%;
-                                // border-radius: 100%;
                                 width: 3vw;
                                 height: 3vw;
                                 padding: 0;
-                                // border-width: 1px;
                                 &:hover,
                                 &:focus {
                                     color: green;
