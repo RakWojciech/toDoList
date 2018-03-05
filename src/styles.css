@@ -102,5 +102,12 @@ body {
       body app-root .area input:focus,
       body app-root .area button:focus {
         outline: none; }
+    body app-root .message {
+      position: absolute;
+      background-color: yellow;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px 50px; }
 
 /*# sourceMappingURL=styles.css.map */
